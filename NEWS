@@ -1,0 +1,34 @@
+likert 1.1
+=========
+
+* New density plot type plot(l, type='density').
+* xtable function to create LaTeX and HTML tables.
+* Added several parameters related to centering bar plots. Can now include the
+  center level and split across zero, or specify which level, or between which
+  levels, centering occurs.
+* New Shiny app to demonstrate many of the features in the likert package. The
+  shinyLikert() function will start the app.
+* Plot a histogram of responses (n) alongside the barplot.
+* Summary function now includes neutral column. Values will be NA if no level
+  is the center.
+* If there is a neutral category in the bar plot it will be labeled with its
+  percentage.
+* Added parameter to wrap text in plots for long item names.
+* Changed the default colors.
+* Added parameter to change legend title.
+* Can now plot bar plot panels horizontally.
+* Changed the center=TRUE as the default for bar plots to.
+* Added panel.flip to flip the placement of grouping elements and items.
+* Added legend.position parameter.
+* Added panel.strip.color to change the background color for panel labels.
+* Added group.order to reorder how groups are plotted. This also works for items in
+  non-grouped items.
+* Added parameters to turn off percent labels for low, high, and netural separately.
+* Added a check to ensure all factors have the same number of levels.
+* Items (i.e columns) that are not a factor will be converted to a factor using as.factor.
+* Added reverse.levels function to reverse code factors. Useful when you wish to plot
+  bars in reverse order (left-to-right).
+* Two new demos, RecodeFactors and UnusedLevels show how to deal with common data
+  issues before using the likert function.
+* Added plot.percents parameter to label each category.
+* Other bug fixes.
