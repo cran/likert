@@ -9,10 +9,11 @@ options(continue="  ")
 
 
 ###################################################
-### code chunk number 2: likert-xtable.Rnw:24-44
+### code chunk number 2: likert-xtable.Rnw:22-43
 ###################################################
-require(likert)
-require(reshape)
+library(likert)
+library(ggplot2)
+library(reshape)
 data(pisaitems)
 
 ##### Item 24: Reading Attitudes
@@ -34,13 +35,13 @@ l24g <- likert(items24, grouping=pisaitems$CNT)
 
 
 ###################################################
-### code chunk number 3: likert-xtable.Rnw:49-50
+### code chunk number 3: likert-xtable.Rnw:48-49
 ###################################################
 xtable(l24)
 
 
 ###################################################
-### code chunk number 4: likert-xtable.Rnw:53-54
+### code chunk number 4: likert-xtable.Rnw:52-53
 ###################################################
 xtable(l24g)
 

@@ -1,13 +1,30 @@
+likert 1.2
+=========
+
+* Added initial support for conducting gap analysis. A demo, GapAnalysis has
+  also been added.
+* Removed dependency on a non-exported function in ggplot2.
+* Can now create a likert object with a pre-summarized data frame.
+* New Shiny app to demonstrate many of the features in the likert package. The
+  shinyLikert() function will start the app.
+* Fixed bug where text.color parameter was not being used.
+* Fixed bug 16.
+* Fixed bug where automatic conversion to factors would not work if there were
+  missing levels in an item.
+* Added text labels to the histogram (if include.histogram=TRUE) for the n.
+* Fixed a bug where plot.likert(..., include.histogram=TRUE) would not work with a group and only one item (i.e. one column).
+* Updates for newer version of R and Roxygen.
+
 likert 1.1
 =========
+
+Released September 25, 2013.
 
 * New density plot type plot(l, type='density').
 * xtable function to create LaTeX and HTML tables.
 * Added several parameters related to centering bar plots. Can now include the
   center level and split across zero, or specify which level, or between which
   levels, centering occurs.
-* New Shiny app to demonstrate many of the features in the likert package. The
-  shinyLikert() function will start the app.
 * Plot a histogram of responses (n) alongside the barplot.
 * Summary function now includes neutral column. Values will be NA if no level
   is the center.

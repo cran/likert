@@ -90,11 +90,6 @@ plot(l24g, type='density')
 # Reordering the groups
 plot(l24g, group.order=c('Canada', 'Mexico', 'United States'))
 
-# Reverse the levels
-l24g.reverse <- likert(items24, grouping=pisaitems$CNT, reverse.levels=TRUE)
-print(l24g.reverse)
-plot(l24g.reverse)
-
 
 ##### Item 29: How often do you read these materials because you want to?
 title <- "How often do you read these materials because you want to?"
@@ -139,4 +134,12 @@ plot(l29g, centered=TRUE, center=2.5) + ggtitle(title)
 
 # Density plots
 plot(l29g, type='density', legend='Country') + ggtitle(title)
+
+
+## With only one varaible
+lone <- likert(items24[,1, drop=FALSE])
+plot(lone)
+
+loneg <- likert(items24[,1, drop=FALSE], grouping=pisaitems$CNT)
+plot(loneg)
 
