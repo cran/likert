@@ -1,14 +1,13 @@
 options(digits=2)
 
 require(likert)
-require(reshape)
 data(pisaitems)
 
 ##### Item 24: Reading Attitudes
 items24 <- pisaitems[,substr(names(pisaitems), 1,5) == 'ST24Q']
 head(items24); ncol(items24)
 
-items24 <- rename(items24, c(
+items24 <- reshape::rename(items24, c(
 			ST24Q01="I read only if I have to.",
 			ST24Q02="Reading is one of my favorite hobbies.",
 			ST24Q03="I like talking about books with other people.",
@@ -22,7 +21,7 @@ items24 <- rename(items24, c(
 			ST24Q11="I like to exchange books with my friends."))
 str(items24)
 
-l24 = likert(items24)
+l24 <- likert(items24)
 l24 #print(l24)
 summary(l24)
 summary(l24, center=1.5)
@@ -40,6 +39,8 @@ plot(l24, center=2, wrap=30)
 plot(l24, center=2, include.center=FALSE, wrap=30)
 plot(l24, center=2, include.center=FALSE, wrap=20)
 plot(l24, plot.percents=TRUE, plot.percent.low=FALSE, plot.percent.high=FALSE)
+
+plot(l24, colors=c('orange','darkorange','darkblue','blue'))
 
 #Include histogram with response counts
 plot(l24, include.histogram=TRUE)
@@ -66,7 +67,7 @@ summary(l24g, center=1.5)
 summary(l24g, center=2)
 
 # xtable
-xtable(l24g)
+# xtable(l24g) # TODO: Doesn't work!
 
 # Plots
 plot(l24g)

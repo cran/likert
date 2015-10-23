@@ -9,16 +9,15 @@ options(continue="  ")
 
 
 ###################################################
-### code chunk number 2: likert-xtable.Rnw:22-43
+### code chunk number 2: likert-xtable.Rnw:22-42
 ###################################################
 library(likert)
 library(ggplot2)
-library(reshape)
 data(pisaitems)
 
 ##### Item 24: Reading Attitudes
 items24 <- pisaitems[,substr(names(pisaitems), 1,5) == 'ST24Q']
-items24 <- rename(items24, c(
+items24 <- reshape::rename(items24, c(
 			ST24Q01="I read only if I have to.",
 			ST24Q02="Reading is one of my favorite hobbies.",
 			ST24Q03="I like talking about books with other people.",
@@ -35,14 +34,14 @@ l24g <- likert(items24, grouping=pisaitems$CNT)
 
 
 ###################################################
-### code chunk number 3: likert-xtable.Rnw:48-49
+### code chunk number 3: likert-xtable.Rnw:47-48
 ###################################################
 xtable(l24)
 
 
 ###################################################
-### code chunk number 4: likert-xtable.Rnw:52-53
+### code chunk number 4: likert-xtable.Rnw:51-52 (eval = FALSE)
 ###################################################
-xtable(l24g)
+## xtable(l24g)
 
 
