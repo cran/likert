@@ -8,13 +8,14 @@
 #' @import xtable
 #' @import ggplot2
 #' @import gridExtra
-#' @import grid
 #' @import reshape2
+#' @importFrom grid grob editGrob vpPath viewport vpTree grid.layout getGrob gTree
+#'             grobWidth grobHeight pushViewport grid.draw upViewport grid.newpage
 #' @importFrom psych describe describeBy
-#' @importFrom reshape rename
 #' @importFrom grDevices colorRamp rgb
 #' @importFrom graphics hist lines pairs par rect strwidth symbols text
 #' @importFrom stats cor cor.test density sd symnum
+#' @importFrom plyr llply
 NA
 
 #' Fictitious dataset with importance and satisfaction results across five different
@@ -105,4 +106,11 @@ NA
 .onAttach <- function(libname, pkgname) {
 	#pkgEnv = pos.to.env(match('package:likert', search()))
 	#assignInNamespace("sqlrepos", paste(system.file(package='likert'), '/data', sep=''), "irutils")
+	if('package:reshape' %in% search()) {
+		packageStartupMessage(
+"The reshape package was found on the search path. It is recommended
+that you detach this package as it causes conflicts with the reshape2
+package. You can detach using the following R command:
+    detach('package:reshape') ")
+	}
 }
