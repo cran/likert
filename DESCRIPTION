@@ -1,14 +1,18 @@
 Package: likert
 Type: Package
-Title: Functions to Analyze and Visualize Likert Type Items
-Version: 1.3.3
-Date: 2015-12-14
+Title: Analysis and Visualization Likert Items
+Version: 1.3.5
+Date: 2016-12-29
 Author: Jason Bryer <jason@bryer.org>, Kimberly Speerschneider
     <kimkspeer@gmail.com>
 Maintainer: Jason Bryer <jason@bryer.org>
 URL: http://jason.bryer.org/likert, http://github.com/jbryer/likert
 BugReports: https://github.com/jbryer/likert/issues
-Description: Functions to analyze and visualize likert type items.
+Description: An approach to analyzing Likert response items, with an emphasis on visualizations. 
+    The stacked bar plot is the preferred method for presenting Likert results. Tabular results
+    are also implemented along with density plots to assist researchers in determining whether 
+    Likert responses can be used quantitatively instead of qualitatively. See the likert(), 
+    summary.likert(), and plot.likert() functions to get started.
 License: GPL
 LazyLoad: yes
 VignetteBuilder: utils
@@ -17,6 +21,6 @@ Imports: psych,reshape2,gridExtra,grid,plyr
 Suggests: devtools,shiny
 RoxygenNote: 5.0.1
 NeedsCompilation: no
-Packaged: 2015-12-15 02:16:57 UTC; jbryer
+Packaged: 2016-12-30 23:54:48 UTC; jbryer
 Repository: CRAN
-Date/Publication: 2015-12-15 09:27:14
+Date/Publication: 2016-12-31 01:37:00
